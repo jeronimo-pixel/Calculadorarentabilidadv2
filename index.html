@@ -31,52 +31,49 @@ h2{font-size:20px;font-weight:300;margin-bottom:1.5rem;padding-bottom:1.25rem;bo
 .ct{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
 .row{display:flex;align-items:center;gap:8px;margin-bottom:9px}
 .row-label{font-size:13px;color:var(--muted);width:170px;flex-shrink:0}
-.row input[type=number]{flex:1;font-family:var(--mono);font-size:13px;padding:8px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;min-width:0}
-.ck{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;color:var(--muted);padding:8px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);white-space:nowrap;cursor:pointer}
-.ck input{accent-color:var(--text)}
-.sep{border-top:1px solid var(--border);margin:12px 0 10px;padding-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
-.eg{display:grid;grid-template-columns:1fr 100px 100px 54px 28px;gap:4px;align-items:center;margin-bottom:5px}
-.eh{margin-bottom:5px}
-.eh span{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
-.eg input{font-family:var(--mono);font-size:12px;padding:7px 7px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;width:100%;min-width:0}
-.eg input[type=text]{font-family:var(--sans);font-size:12px}
-.pg{display:grid;grid-template-columns:1fr 38px 88px 44px 88px 54px 28px;gap:4px;align-items:center;margin-bottom:5px}
-.ph{margin-bottom:5px}
-.ph span{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
-.pg input{font-family:var(--mono);font-size:12px;padding:7px 6px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;width:100%;min-width:0}
-.pg input[type=text]{font-family:var(--sans);font-size:12px}
-.pill{font-family:var(--mono);font-size:10px;padding:7px 3px;border-radius:3px;text-align:center;cursor:pointer;border:1px solid var(--border);-webkit-appearance:none;user-select:none;-webkit-user-select:none}
+.row input[type=number]{flex:1;font-family:var(--mono);font-size:14px;padding:10px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;min-width:0}
+.ck{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;color:var(--muted);padding:10px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);white-space:nowrap;cursor:pointer}
+.ck input{accent-color:var(--text);width:16px;height:16px}
+.sep{border-top:1px solid var(--border);margin:14px 0 12px;padding-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.item-card{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:10px;margin-bottom:8px}
+.item-top{display:flex;gap:6px;align-items:center;margin-bottom:8px}
+.item-row{display:flex;gap:6px;margin-bottom:8px}
+.item-row:last-child{margin-bottom:0}
+.lfield{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.lfield span{font-size:10px;color:var(--faint);font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.lfield input{width:100%;font-family:var(--mono);font-size:14px;padding:9px 8px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--text);-webkit-appearance:none;outline:none}
+.lfield input[type=text]{font-family:var(--sans)}
+.pill{font-family:var(--mono);font-size:11px;padding:9px 10px;border-radius:3px;text-align:center;cursor:pointer;border:1px solid var(--border);user-select:none;-webkit-user-select:none;white-space:nowrap;align-self:flex-end;flex-shrink:0}
 .pill.n{background:var(--bg);color:var(--faint)}
 .pill.c{background:var(--amber-bg);color:var(--amber-t);border-color:#d4b96a}
-.del{font-size:14px;padding:5px;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--faint);cursor:pointer;line-height:1;-webkit-appearance:none}
-.add{font-family:var(--mono);font-size:11px;padding:8px 14px;border:1px dashed var(--border-strong);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer;margin-top:8px;-webkit-appearance:none;display:block}
-.pfoot{display:flex;justify-content:flex-end;gap:16px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted)}
+.del-btn{padding:9px 11px;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--faint);cursor:pointer;font-size:14px;flex-shrink:0;-webkit-appearance:none;line-height:1}
+.add-btn{font-family:var(--mono);font-size:11px;padding:10px 14px;border:1px dashed var(--border-strong);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer;margin-top:8px;-webkit-appearance:none;display:block;width:100%;text-align:left}
+.pfoot{display:flex;justify-content:flex-end;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-family:var(--mono);font-size:12px;color:var(--muted)}
 .pfoot b{color:var(--text)}
 .note{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:1rem}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1rem}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1rem}
+.metrics .met:last-child{grid-column:span 2}
 .met{background:var(--surface);padding:1rem 1.1rem}
 .ml{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-.mv{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text)}
+.mv{font-family:var(--mono);font-size:20px;font-weight:500;color:var(--text)}
 .met.g{background:var(--green-bg)}.met.g .ml{color:#2d7a4f}.met.g .mv{color:var(--green-t)}
 .met.w{background:var(--amber-bg)}.met.w .ml{color:#7a6000}.met.w .mv{color:var(--amber-t)}
 .met.b{background:var(--red-bg)}.met.b .ml{color:#8a3030}.met.b .mv{color:var(--red-t)}
 .bd{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden}
-.br{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:9px 1.1rem;border-bottom:1px solid var(--border)}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:11px 1rem;border-bottom:1px solid var(--border);gap:8px}
 .br:last-child{border-bottom:none}
-.br .lb{color:var(--muted)}
-.vp{font-family:var(--mono);color:var(--green-t)}
-.vn{font-family:var(--mono);color:var(--red-t)}
-.br.st{background:var(--bg)}.br.st .lb{font-weight:500;color:var(--text)}
-.br.tot{background:var(--text);padding:13px 1.1rem}
+.br .lb{color:var(--muted);flex:1}
+.vp{font-family:var(--mono);color:var(--green-t);white-space:nowrap}
+.vn{font-family:var(--mono);color:var(--red-t);white-space:nowrap}
+.br.st{background:var(--bg)}.br.st .lb{font-weight:600;color:var(--text)}
+.br.tot{background:var(--text);padding:14px 1rem}
 .br.tot .lb{color:#bbb;font-size:12px;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase}
-.br.tot .mv{font-family:var(--mono);font-size:17px;font-weight:500;color:#fff}
+.br.tot .mv{font-family:var(--mono);font-size:18px;font-weight:500;color:#fff}
 .br.tot .sv{font-family:var(--mono);font-size:12px;color:#777;margin-top:2px;text-align:right}
 .ibadge{font-family:var(--mono);font-size:10px;padding:2px 5px;border-radius:2px;background:var(--amber-bg);color:var(--amber-t);margin-left:4px}
-@media(max-width:500px){
-  .metrics{grid-template-columns:1fr 1fr}.metrics .met:last-child{grid-column:span 2}
-  .row{flex-wrap:wrap}.row-label{width:100%}
-  .pg{grid-template-columns:1fr 32px 72px 36px 72px 46px 24px;gap:3px}
-  .eg{grid-template-columns:1fr 82px 82px 46px 24px;gap:3px}
+@media(min-width:600px){
+  .metrics{grid-template-columns:repeat(3,1fr)}
+  .metrics .met:last-child{grid-column:auto}
 }
 </style>
 </head>
@@ -88,40 +85,230 @@ h2{font-size:20px;font-weight:300;margin-bottom:1.5rem;padding-bottom:1.25rem;bo
   <div class="card">
     <div class="ct">Mano de obra y traslado</div>
     <div class="row">
-      <span class="row-label">Cobro al cliente (CLP)</span>
+      <span class="row-label">Cobro al cliente</span>
       <input type="number" id="mdo_cobro" value="60000" inputmode="numeric">
-      <label class="ck"><input type="checkbox" id="mdo_cobro_iva"> con IVA</label>
+      <label class="ck"><input type="checkbox" id="mdo_cobro_iva"> IVA</label>
     </div>
     <div class="row">
-      <span class="row-label">Costo para mí (CLP)</span>
+      <span class="row-label">Costo para mí</span>
       <input type="number" id="mdo_costo" value="25000" inputmode="numeric">
-      <label class="ck"><input type="checkbox" id="mdo_costo_iva"> con IVA</label>
+      <label class="ck"><input type="checkbox" id="mdo_costo_iva"> IVA</label>
     </div>
     <div class="row">
       <span class="row-label">Traslado / combustible</span>
       <input type="number" id="traslado" value="8000" inputmode="numeric">
-      <label class="ck"><input type="checkbox" id="traslado_iva"> con IVA</label>
+      <label class="ck"><input type="checkbox" id="traslado_iva"> IVA</label>
     </div>
     <div class="sep">Servicios externos</div>
-    <div class="eg eh">
-      <span>Descripción</span><span>Cobro cliente</span><span>Costo para mí</span><span>IVA costo</span><span></span>
-    </div>
     <div id="ext-list"></div>
-    <button class="add" id="btn-add-ext">+ agregar servicio externo</button>
+    <button class="add-btn" id="btn-add-ext">+ agregar servicio externo</button>
   </div>
   <div class="card">
     <div class="ct">Partes e insumos</div>
-    <div class="pg ph">
-      <span>Descripción</span><span>Cant.</span><span>Costo unit.</span><span>Mkup%</span><span>P.venta unit.</span><span>IVA costo</span><span></span>
-    </div>
     <div id="partes-list"></div>
     <div class="pfoot" id="pfoot"></div>
-    <button class="add" id="btn-add-parte">+ agregar parte</button>
+    <button class="add-btn" id="btn-add-parte">+ agregar parte</button>
   </div>
   <div class="note" id="iva-note"></div>
   <div class="metrics" id="metrics"></div>
   <div class="bd" id="breakdown"></div>
 </div>
-<script src="app.js"></script>
+<script>
+(function(){
+var IVA=0.19;
+var PRESETS={
+  mantencion:{label:'Mantención',mdo_cobro:60000,mdo_costo:25000,traslado:8000,partes:[
+    {nombre:'Aceite motor',costo:18000,cantidad:1,markup:30,iva:false},
+    {nombre:'Filtro aceite',costo:4500,cantidad:1,markup:50,iva:false},
+    {nombre:'Filtro aire',costo:6000,cantidad:1,markup:50,iva:false}]},
+  frenos:{label:'Frenos',mdo_cobro:80000,mdo_costo:35000,traslado:8000,partes:[
+    {nombre:'Pastillas del. par',costo:28000,cantidad:1,markup:30,iva:false},
+    {nombre:'Pastillas tras. par',costo:22000,cantidad:1,markup:30,iva:false},
+    {nombre:'Líquido de frenos',costo:5000,cantidad:1,markup:30,iva:false}]},
+  suspension:{label:'Suspensión',mdo_cobro:90000,mdo_costo:40000,traslado:8000,partes:[
+    {nombre:'Amortiguadores del. (par)',costo:90000,cantidad:1,markup:30,iva:false},
+    {nombre:'Neumáticos',costo:30000,cantidad:4,markup:30,iva:false}]},
+  custom:{label:'Personalizado',mdo_cobro:60000,mdo_costo:25000,traslado:8000,partes:[]}
+};
+var partes=[],externos=[];
+
+function fmt(n){return '$'+Math.round(n).toLocaleString('es-CL')}
+function gv(id){return parseFloat(document.getElementById(id).value)||0}
+function gc(id){return document.getElementById(id).checked}
+function neto(v,c){return c?v/(1+IVA):v}
+function cpN(p){return p.iva?p.costo/(1+IVA):p.costo}
+function pventa(p){return cpN(p)*(1+p.markup/100)}
+
+var tabsEl=document.getElementById('tabs');
+Object.keys(PRESETS).forEach(function(k){
+  var b=document.createElement('button');
+  b.className='tab'+(k==='mantencion'?' on':'');
+  b.textContent=PRESETS[k].label;
+  b.setAttribute('data-key',k);
+  tabsEl.appendChild(b);
+});
+tabsEl.addEventListener('click',function(e){
+  var b=e.target;
+  while(b&&b.getAttribute&&!b.getAttribute('data-key'))b=b.parentNode;
+  if(b&&b.getAttribute)setTab(b.getAttribute('data-key'));
+});
+
+function setTab(k){
+  if(!k||!PRESETS[k])return;
+  tabsEl.querySelectorAll('.tab').forEach(function(b){b.className='tab'+(b.getAttribute('data-key')===k?' on':'')});
+  var p=PRESETS[k];
+  document.getElementById('mdo_cobro').value=p.mdo_cobro;
+  document.getElementById('mdo_costo').value=p.mdo_costo;
+  document.getElementById('traslado').value=p.traslado;
+  ['mdo_cobro_iva','mdo_costo_iva','traslado_iva'].forEach(function(id){document.getElementById(id).checked=false});
+  partes=p.partes.map(function(x){return{nombre:x.nombre,costo:x.costo,cantidad:x.cantidad,markup:x.markup,iva:x.iva}});
+  externos=[];
+  renderPartes();renderExternos();calc();
+}
+
+['mdo_cobro','mdo_costo','traslado'].forEach(function(id){document.getElementById(id).addEventListener('input',calc)});
+['mdo_cobro_iva','mdo_costo_iva','traslado_iva'].forEach(function(id){document.getElementById(id).addEventListener('change',calc)});
+document.getElementById('btn-add-ext').addEventListener('click',function(){externos.push({nombre:'',cobro:0,costo:0,iva:false});renderExternos()});
+document.getElementById('btn-add-parte').addEventListener('click',function(){partes.push({nombre:'',costo:0,cantidad:1,markup:30,iva:false});renderPartes()});
+
+function lf(label,inp){
+  var w=document.createElement('div');w.className='lfield';
+  var s=document.createElement('span');s.textContent=label;
+  w.appendChild(s);w.appendChild(inp);return w;
+}
+function ni(val,opts){
+  var i=document.createElement('input');i.type='number';i.inputMode='numeric';
+  if(val!==''&&val!==undefined)i.value=val;
+  if(opts&&opts.ph)i.placeholder=opts.ph;
+  if(opts&&opts.center)i.style.textAlign='center';
+  return i;
+}
+function pill(iva){
+  var d=document.createElement('div');d.className='pill '+(iva?'c':'n');
+  d.textContent=iva?'con IVA':'neto';return d;
+}
+function updPill(d,iva){d.className='pill '+(iva?'c':'n');d.textContent=iva?'con IVA':'neto'}
+function delBtn(){
+  var b=document.createElement('button');b.className='del-btn';b.textContent='✕';return b;
+}
+
+function renderExternos(){
+  var el=document.getElementById('ext-list');el.innerHTML='';
+  externos.forEach(function(e,i){
+    var card=document.createElement('div');card.className='item-card';
+    var top=document.createElement('div');top.className='item-top';
+    var nm=document.createElement('input');nm.type='text';nm.className='lfield';
+    nm.style.cssText='flex:1;font-family:var(--sans);font-size:14px;padding:9px 8px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--text);-webkit-appearance:none;outline:none;min-width:0';
+    nm.placeholder='Descripción';nm.value=e.nombre;
+    nm.addEventListener('input',function(){externos[i].nombre=this.value});
+    var db=delBtn();db.addEventListener('click',function(){externos.splice(i,1);renderExternos();calc()});
+    top.appendChild(nm);top.appendChild(db);
+
+    var bot=document.createElement('div');bot.className='item-row';
+    var c1=ni(e.cobro||'',{ph:'0'});c1.addEventListener('input',function(){externos[i].cobro=parseFloat(this.value)||0;calc()});
+    var c2=ni(e.costo||'',{ph:'0'});c2.addEventListener('input',function(){externos[i].costo=parseFloat(this.value)||0;calc()});
+    var pl=pill(e.iva);
+    pl.addEventListener('click',function(){externos[i].iva=!externos[i].iva;updPill(pl,externos[i].iva);calc()});
+    bot.appendChild(lf('Cobro cliente',c1));bot.appendChild(lf('Costo para mí',c2));bot.appendChild(pl);
+
+    card.appendChild(top);card.appendChild(bot);el.appendChild(card);
+  });
+}
+
+function renderPartes(){
+  var el=document.getElementById('partes-list');el.innerHTML='';
+  partes.forEach(function(p,i){
+    var card=document.createElement('div');card.className='item-card';
+
+    var top=document.createElement('div');top.className='item-top';
+    var nm=document.createElement('input');nm.type='text';
+    nm.style.cssText='flex:1;font-family:var(--sans);font-size:14px;padding:9px 8px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--text);-webkit-appearance:none;outline:none;min-width:0';
+    nm.placeholder='Descripción';nm.value=p.nombre;
+    nm.addEventListener('input',function(){partes[i].nombre=this.value});
+    var db=delBtn();db.addEventListener('click',function(){partes.splice(i,1);renderPartes();calc()});
+    top.appendChild(nm);top.appendChild(db);
+
+    var r1=document.createElement('div');r1.className='item-row';
+    var qty=ni(p.cantidad,{center:true});
+    qty.addEventListener('input',function(){partes[i].cantidad=parseFloat(this.value)||1;updPfoot();calc()});
+    var cInp=ni(p.costo);
+    var pvEl=ni(Math.round(pventa(p)));
+    var mkEl=ni(p.markup,{center:true});
+
+    cInp.addEventListener('input',function(){partes[i].costo=parseFloat(this.value)||0;pvEl.value=Math.round(pventa(partes[i]));updPfoot();calc()});
+    mkEl.addEventListener('input',function(){partes[i].markup=parseFloat(this.value)||0;pvEl.value=Math.round(pventa(partes[i]));updPfoot();calc()});
+    pvEl.addEventListener('input',function(){
+      var cn=cpN(partes[i]);
+      if(cn>0){partes[i].markup=((parseFloat(this.value)||0)/cn-1)*100;mkEl.value=partes[i].markup.toFixed(1)}
+      updPfoot();calc();
+    });
+    r1.appendChild(lf('Cant.',qty));r1.appendChild(lf('Costo unit.',cInp));r1.appendChild(lf('Markup %',mkEl));
+
+    var r2=document.createElement('div');r2.className='item-row';
+    var pl=pill(p.iva);
+    pl.addEventListener('click',function(){partes[i].iva=!partes[i].iva;pvEl.value=Math.round(pventa(partes[i]));updPill(pl,partes[i].iva);updPfoot();calc()});
+    r2.appendChild(lf('P. venta unit.',pvEl));r2.appendChild(pl);
+
+    card.appendChild(top);card.appendChild(r1);card.appendChild(r2);el.appendChild(card);
+  });
+  updPfoot();
+}
+
+function updPfoot(){
+  var ct=0,co=0;
+  partes.forEach(function(p){ct+=cpN(p)*p.cantidad;co+=pventa(p)*p.cantidad});
+  document.getElementById('pfoot').innerHTML=partes.length?'<div>Costo neto: <b>'+fmt(ct)+'</b></div><div>Cobro total: <b>'+fmt(co)+'</b></div>':'';
+}
+
+function calc(){
+  var mc=neto(gv('mdo_cobro'),gc('mdo_cobro_iva'));
+  var mk=neto(gv('mdo_costo'),gc('mdo_costo_iva'));
+  var tr=neto(gv('traslado'),gc('traslado_iva'));
+  var mc_iva=gc('mdo_cobro_iva'),mk_iva=gc('mdo_costo_iva'),tr_iva=gc('traslado_iva');
+  var ce=0,ie=0;
+  externos.forEach(function(e){ce+=e.iva?e.costo/(1+IVA):e.costo;ie+=e.cobro});
+  var cp=0,ip=0;
+  partes.forEach(function(p){cp+=cpN(p)*p.cantidad;ip+=pventa(p)*p.cantidad});
+  var iT=mc+tr+ie+ip,cT=mk+tr+ce+cp,util=iT-cT;
+  var mg=iT>0?(util/iT*100):0,conIva=iT*(1+IVA);
+  var cls=mg>=40?'g':mg>=20?'':mg>=0?'w':'b';
+  var hasIva=mc_iva||mk_iva||tr_iva||partes.some(function(p){return p.iva})||externos.some(function(e){return e.iva});
+  document.getElementById('iva-note').textContent=hasIva?'— valores en neto (sin IVA)':'';
+
+  var mEl=document.getElementById('metrics');mEl.innerHTML='';
+  [{l:'Utilidad neta',v:fmt(util)},{l:'Margen',v:mg.toFixed(1)+'%'},{l:'Ingreso total neto',v:fmt(iT)}].forEach(function(x,idx){
+    var d=document.createElement('div');d.className='met'+(idx<2?' '+cls:'');
+    d.innerHTML='<div class="ml">'+x.l+'</div><div class="mv">'+x.v+'</div>';
+    mEl.appendChild(d);
+  });
+
+  var rows=[
+    {lb:'M. de obra cobrada'+(mc_iva?'<span class="ibadge">IVA→neto</span>':''),v:fmt(mc),cls:'vp'},
+    {lb:'Traslado cobrado'+(tr_iva?'<span class="ibadge">IVA→neto</span>':''),v:fmt(tr),cls:'vp'}
+  ];
+  externos.forEach(function(e){rows.push({lb:e.nombre||'Serv. externo',v:fmt(e.cobro),cls:'vp'})});
+  rows.push({lb:'Partes cobradas al cliente',v:fmt(ip),cls:'vp'});
+  rows.push({lb:'Ingreso total neto',v:fmt(iT),cls:'vp',st:true});
+  rows.push({lb:'Costo M. de obra'+(mk_iva?'<span class="ibadge">IVA→neto</span>':''),v:'−'+fmt(mk),cls:'vn'});
+  rows.push({lb:'Traslado / combustible',v:'−'+fmt(tr),cls:'vn'});
+  externos.forEach(function(e){rows.push({lb:'Costo: '+(e.nombre||'Serv. externo')+(e.iva?'<span class="ibadge">IVA→neto</span>':''),v:'−'+fmt(e.iva?e.costo/(1+IVA):e.costo),cls:'vn'})});
+  rows.push({lb:'Costo partes (neto)',v:'−'+fmt(cp),cls:'vn'});
+  rows.push({lb:'Utilidad neta',v:(util>=0?'':'-')+fmt(Math.abs(util)),cls:util>=0?'vp':'vn',st:true});
+
+  var bd=document.getElementById('breakdown');bd.innerHTML='';
+  rows.forEach(function(r){
+    var d=document.createElement('div');d.className='br'+(r.st?' st':'');
+    d.innerHTML='<span class="lb">'+r.lb+'</span><span class="'+r.cls+'">'+r.v+'</span>';
+    bd.appendChild(d);
+  });
+  var tot=document.createElement('div');tot.className='br tot';
+  tot.innerHTML='<span class="lb">Precio final al cliente</span><div style="text-align:right"><div class="mv">'+fmt(iT)+'</div><div class="sv">'+fmt(conIva)+' c/IVA</div></div>';
+  bd.appendChild(tot);
+}
+
+setTab('mantencion');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
+})();
+</script>
 </body>
 </html>
