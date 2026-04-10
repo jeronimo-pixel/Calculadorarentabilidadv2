@@ -1,0 +1,9 @@
+{
+  "name": "Rentabilidad — Autónomo",
+  "short_name": "Rentabilidad",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f4f0",
+  "theme_color": "#1a1916",
+  "icons": []
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Rentabilidad">
+<link rel="manifest" href="manifest.json">
+<title>Rentabilidad — Autónomo</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f4f0;--surface:#fff;--border:#e0ddd6;--border-strong:#c8c4ba;
+  --text:#1a1916;--muted:#6b6860;--faint:#9c9a94;
+  --green-bg:#e8f2ec;--green-t:#1a4a2e;
+  --red-bg:#f5e8e8;--red-t:#5c1a1a;
+  --amber-bg:#fdf5dc;--amber-t:#4a3800;
+  --mono:ui-monospace,Menlo,monospace;
+  --sans:-apple-system,Helvetica,Arial,sans-serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);padding:1.5rem 1rem 5rem;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto}
+h1{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+h2{font-size:20px;font-weight:300;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border-strong)}
+.tabs{display:flex;border:1px solid var(--border-strong);border-radius:4px;overflow:hidden;margin-bottom:1.5rem}
+.tab{flex:1;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:10px 4px;border:none;border-right:1px solid var(--border-strong);background:var(--bg);color:var(--muted);cursor:pointer;text-align:center;-webkit-appearance:none}
+.tab:last-child{border-right:none}
+.tab.on{background:var(--text);color:#fff}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.25rem;margin-bottom:1rem}
+.ct{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+.row{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.row-label{font-size:13px;color:var(--muted);width:170px;flex-shrink:0}
+.row input[type=number]{flex:1;font-family:var(--mono);font-size:13px;padding:8px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;min-width:0}
+.ck{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;color:var(--muted);padding:8px 9px;border:1px solid var(--border);border-radius:3px;background:var(--bg);white-space:nowrap;cursor:pointer}
+.ck input{accent-color:var(--text)}
+.sep{border-top:1px solid var(--border);margin:12px 0 10px;padding-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.eg{display:grid;grid-template-columns:1fr 100px 100px 54px 28px;gap:4px;align-items:center;margin-bottom:5px}
+.eh{margin-bottom:5px}
+.eh span{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.eg input{font-family:var(--mono);font-size:12px;padding:7px 7px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;width:100%;min-width:0}
+.eg input[type=text]{font-family:var(--sans);font-size:12px}
+.pg{display:grid;grid-template-columns:1fr 38px 88px 44px 88px 54px 28px;gap:4px;align-items:center;margin-bottom:5px}
+.ph{margin-bottom:5px}
+.ph span{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.pg input{font-family:var(--mono);font-size:12px;padding:7px 6px;border:1px solid var(--border);border-radius:3px;background:var(--bg);color:var(--text);-webkit-appearance:none;outline:none;width:100%;min-width:0}
+.pg input[type=text]{font-family:var(--sans);font-size:12px}
+.pill{font-family:var(--mono);font-size:10px;padding:7px 3px;border-radius:3px;text-align:center;cursor:pointer;border:1px solid var(--border);-webkit-appearance:none;user-select:none;-webkit-user-select:none}
+.pill.n{background:var(--bg);color:var(--faint)}
+.pill.c{background:var(--amber-bg);color:var(--amber-t);border-color:#d4b96a}
+.del{font-size:14px;padding:5px;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--faint);cursor:pointer;line-height:1;-webkit-appearance:none}
+.add{font-family:var(--mono);font-size:11px;padding:8px 14px;border:1px dashed var(--border-strong);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer;margin-top:8px;-webkit-appearance:none;display:block}
+.pfoot{display:flex;justify-content:flex-end;gap:16px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted)}
+.pfoot b{color:var(--text)}
+.note{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:1rem}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1rem}
+.met{background:var(--surface);padding:1rem 1.1rem}
+.ml{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+.mv{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text)}
+.met.g{background:var(--green-bg)}.met.g .ml{color:#2d7a4f}.met.g .mv{color:var(--green-t)}
+.met.w{background:var(--amber-bg)}.met.w .ml{color:#7a6000}.met.w .mv{color:var(--amber-t)}
+.met.b{background:var(--red-bg)}.met.b .ml{color:#8a3030}.met.b .mv{color:var(--red-t)}
+.bd{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:9px 1.1rem;border-bottom:1px solid var(--border)}
+.br:last-child{border-bottom:none}
+.br .lb{color:var(--muted)}
+.vp{font-family:var(--mono);color:var(--green-t)}
+.vn{font-family:var(--mono);color:var(--red-t)}
+.br.st{background:var(--bg)}.br.st .lb{font-weight:500;color:var(--text)}
+.br.tot{background:var(--text);padding:13px 1.1rem}
+.br.tot .lb{color:#bbb;font-size:12px;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.br.tot .mv{font-family:var(--mono);font-size:17px;font-weight:500;color:#fff}
+.br.tot .sv{font-family:var(--mono);font-size:12px;color:#777;margin-top:2px;text-align:right}
+.ibadge{font-family:var(--mono);font-size:10px;padding:2px 5px;border-radius:2px;background:var(--amber-bg);color:var(--amber-t);margin-left:4px}
+@media(max-width:500px){
+  .metrics{grid-template-columns:1fr 1fr}.metrics .met:last-child{grid-column:span 2}
+  .row{flex-wrap:wrap}.row-label{width:100%}
+  .pg{grid-template-columns:1fr 32px 72px 36px 72px 46px 24px;gap:3px}
+  .eg{grid-template-columns:1fr 82px 82px 46px 24px;gap:3px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Autónomo Car Service</h1>
+  <h2>Calculadora de rentabilidad</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="card">
+    <div class="ct">Mano de obra y traslado</div>
+    <div class="row">
+      <span class="row-label">Cobro al cliente (CLP)</span>
+      <input type="number" id="mdo_cobro" value="60000" inputmode="numeric">
+      <label class="ck"><input type="checkbox" id="mdo_cobro_iva"> con IVA</label>
+    </div>
+    <div class="row">
+      <span class="row-label">Costo para mí (CLP)</span>
+      <input type="number" id="mdo_costo" value="25000" inputmode="numeric">
+      <label class="ck"><input type="checkbox" id="mdo_costo_iva"> con IVA</label>
+    </div>
+    <div class="row">
+      <span class="row-label">Traslado / combustible</span>
+      <input type="number" id="traslado" value="8000" inputmode="numeric">
+      <label class="ck"><input type="checkbox" id="traslado_iva"> con IVA</label>
+    </div>
+    <div class="sep">Servicios externos</div>
+    <div class="eg eh">
+      <span>Descripción</span><span>Cobro cliente</span><span>Costo para mí</span><span>IVA costo</span><span></span>
+    </div>
+    <div id="ext-list"></div>
+    <button class="add" id="btn-add-ext">+ agregar servicio externo</button>
+  </div>
+  <div class="card">
+    <div class="ct">Partes e insumos</div>
+    <div class="pg ph">
+      <span>Descripción</span><span>Cant.</span><span>Costo unit.</span><span>Mkup%</span><span>P.venta unit.</span><span>IVA costo</span><span></span>
+    </div>
+    <div id="partes-list"></div>
+    <div class="pfoot" id="pfoot"></div>
+    <button class="add" id="btn-add-parte">+ agregar parte</button>
+  </div>
+  <div class="note" id="iva-note"></div>
+  <div class="metrics" id="metrics"></div>
+  <div class="bd" id="breakdown"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
